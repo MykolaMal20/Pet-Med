@@ -2,19 +2,25 @@ const { defineConfig } = require('cypress');
 const webpackConfig = require('./config/webpack.cypress.config');
 
 module.exports = defineConfig({
+    projectId: 'fpsyze',
     component: {
         devServer: {
             framework: 'react',
             bundler: 'webpack',
-            webpackConfig, // webpackConfig: webpackConfig,
+            webpackConfig, // webpackConfig: webpackConfig
         },
-        specPattern: ['src/**/*.cy.{js,jsx}'],
+        specPattern: ['src/**/*.cy.{js,jsx,ts,tsx}'],
         setupNodeEvents(on, config) {
-            // component testing node events setup code
+            // Налаштування Node подій для component testing
             // https://docs.cypress.io/guides/tooling/code-coverage
             require('@cypress/code-coverage/task')(on, config);
 
+            // Використання Babel для обробки файлів
             on('file:preprocessor', require('@cypress/code-coverage/use-babelrc'));
+
+            on('after:screenshot', (details) => {
+                console.log('Screenshot taken', details);
+            });
 
             return config;
         },
@@ -22,7 +28,14 @@ module.exports = defineConfig({
 
     e2e: {
         setupNodeEvents(on, config) {
-            // implement node event listeners here
+            on('task', {
+                log(message) {
+                    console.log(message);
+                    return null;
+                },
+            });
+
+            return config;
         },
     },
 });

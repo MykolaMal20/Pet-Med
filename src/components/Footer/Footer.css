@@ -1,0 +1,45 @@
+.containerFooter {
+    background-color: #4f392e;
+    color: #c18a4b;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    display: flex;
+
+    align-items: center;
+}
+
+.logoImage {
+    width: 80px;
+    height: auto;
+}
+
+.contact-info,
+.address,
+.working-hours {
+    text-align: center;
+}
+
+h2 {
+    font-size: 34px;
+    margin-left: 40px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+body {
+    margin: 0px;
+}
