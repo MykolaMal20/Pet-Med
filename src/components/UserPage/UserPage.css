@@ -1,0 +1,86 @@
+.petCard {
+    background-color: #5c3a2d;
+    padding: 20px;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.profilePicture {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.petDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.detailField {
+    background-color: #7a5243;
+    border-radius: 15px;
+    padding: 8px;
+    font-size: 14px;
+    color: #e6d2c3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detailFieldCentr {
+    background-color: #7a5243;
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 210px;
+    margin-right: 210px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #e6d2c3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.detailField span {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #e6d2c3;
+}
+
+.procedures,
+.identifiers {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.procedures button,
+.identifiers div {
+    background-color: #7a5243;
+    color: #e6d2c3;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 14px;
+    min-width: 320px;
+    text-align: center;
+}
+
+.actions {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

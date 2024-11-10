@@ -30,6 +30,13 @@ const basicConfig = {
                     },
                 ],
             },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name][ext]',
+                },
+            },
         ],
     },
     resolve: {
@@ -40,6 +47,7 @@ const basicConfig = {
     },
     devServer: {
         port: 9000,
+        historyApiFallback: true,
     },
 };
 
